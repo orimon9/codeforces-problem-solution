@@ -1,0 +1,32 @@
+//https://codeforces.com/contest/2037/problem/A
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+
+{
+
+    int t;
+    cin>>t;
+
+    while(t--){
+        int n;
+        cin>>n;
+
+        vector<int>a(n);
+        map<int,int>f;
+
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+            f[a[i]]++;
+        }
+        int s=0;
+
+        for(auto[key,count]:f){
+            s+=count/2;
+        }
+        cout<<s<<endl;
+    }
+    return 0;
+}
